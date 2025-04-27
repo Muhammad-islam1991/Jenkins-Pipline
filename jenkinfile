@@ -26,7 +26,7 @@ pipeline {
         success {
             mail to: 'islam.m1991@gmail.com',
                  subject: "Build Successful: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Good news! The build ${env.BUILD_NUMBER} of project '${env.JOB_NAME}' succeeded.\n\nCheck the details here: ${env.BUILD_URL}"
+                 body: "Hi Good news! The build ${env.BUILD_NUMBER} of project '${env.JOB_NAME}' succeeded.\n\nCheck the details here: ${env.BUILD_URL}"
         }
     }
 }
