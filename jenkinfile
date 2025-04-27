@@ -20,6 +20,12 @@ pipeline {
                 // Your deploy commands here
             }
         }
+       stage('Complete') {
+            steps {
+                echo 'Completing the application...'
+                // Your complete commands here
+            }
+        }
     }
 
     post {
