@@ -23,7 +23,7 @@ pipeline {
        stage('Complete') {
             steps {
                 echo 'Completing the application...'
-                // Your complete commands here
+                // Your complete commands 
             }
         }
     }
