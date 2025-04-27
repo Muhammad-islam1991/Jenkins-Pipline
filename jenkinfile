@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                // Your build commands here
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Your test commands here
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Your deploy commands here
+            }
+        }
+    }
+
+    post {
+        success {
+            mail to: 'islam.m1991@gmail.com',
+                 subject: "Build Successful: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "Good news! The build ${env.BUILD_NUMBER} of project '${env.JOB_NAME}' succeeded.\n\nCheck the details here: ${env.BUILD_URL}"
+        }
+    }
+}
+
